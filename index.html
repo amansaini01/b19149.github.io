@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>js </title>
+
+<script language="javascript" type="text/javascript">
+alert("This programme will check your fitness level using BMI")
+var ht = prompt("Enter your height(in m) -");
+var wt = prompt("Enter your weight(in kg) -");
+function bmi(ht, wt){
+	bmi1 =  wt/(ht*ht);
+	document.write("<h2>Your Body Mass Index is " + bmi1+"\n<br></h2>");
+	if(bmi1 == 0){
+		alert("you have not entered anything")
+	}
+	else if(bmi1 <= 18){
+		document.write("<h2>\nYou are underweight.</h2><br>");
+		alert("Underweight")
+		wtr = (ht*ht*18);
+		document.write("<h2>\nYou should gain " + (wtr - wt) + "kg weight to fall under Healthy category.</h2><br>") ;
+    }
+	else if(18 < bmi1 < 22 ){
+		document.write("<h2>You are healthy.</h2><br>");
+		alert("Healthy")
+	}
+	else{
+		document.write("<h2>You are overweight.</h2><br>");
+		alert("Overerweight")
+		wtr = (ht*ht*18);
+		document.write("\n<h2>You should loose " + (wt - wtr) + "kg weight to fall under Healthy category.</h2>");
+	}
+}
+bmi(ht, wt)
+</script>
+</head>
+<body bgcolor = "pink" font color="green" background="w2.jpg"><br>
+<font color = "yellow" size="20">
+<h2> Welcome to this page </h2>
+Here is the BMI table -->
+<table border color="red" width="50%" height="40%" bgcolor="red">
+<caption><h1 align='center'> BODY MASS INDEX </h1></caption>
+<tr>
+<td><b>BMI</b></td>
+<td>0 - 18</td>
+<td>18 - 22</td>
+<td>22 - 30</td>
+<td> > 30 </td>
+</tr>
+<tr>
+<td><b>State</b></td>
+<td>Underweight</td>
+<td>Healthy</td>
+<td>Overweight</td>
+<td>Obese</td>
+</tr
+</table>
+</font>
+</body>
+</html>
